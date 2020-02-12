@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.database {
+  color: white;
+  display: none;
+  background: red;
+  position: absolute;
+  width: auto;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.game {
+  color: white;
+  background: blue;
+  width: auto;
+  padding: 2rem;
+}
+
+.game span {
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.selected {
+  background: red;
+  padding: 0.5 rem;
+}
+
+.play {
+  color: white;
+  background: orangered;
+  width: auto;
+  padding: 2rem;
+}
+
+.play span {
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
