@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Materialize -->
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Materialize icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- ----------- -->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- ---------- -->
+  </head>
+
+  <body>
+    <div class="row container">
+      <!-- input container -->
+      <!-- will be set to display none after hit sumbit -->
+      <div class="input-container col s12">
+        <div class="fixed-action-btn">
+          <a class="btn-floating btn-large red">
+            <i class="large material-icons">mode_edit</i>
+          </a>
+          <ul>
+            <li>
+              <input type="file" id="FileReader" onchange="OnFileLoad()" />
+            </li>
+            <li>
+              <label for="FileReader">
+                <a
+                  class="btn-floating green waves-effect waves-light upload-file-btn"
+                >
+                  <i class="material-icons">attach_file</i>
+                </a>
+              </label>
+            </li>
+            <li>
+              <a class="btn-floating blue waves-effect waves-light submit-btn"
+                ><i class="material-icons">send</i></a
+              >
+            </li>
+          </ul>
+        </div>
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <h3 class="textarea-intro">Hãy điền vào đây</h3>
+              <textarea id="input" class="z-depth-5"></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- Teacher will select correct answer after hit submit -->
+      <!-- Seperate letter with javascript then use span with onClick -->
+      <a class="waves-effect waves-red btn-flat back-btn"><i class="material-icons left">arrow_back</i>Back</a>
+      <div class="selecte-answer-container z-depth-5 col s12"></div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var elems = document.querySelectorAll(".fixed-action-btn");
+        var instances = M.FloatingActionButton.init(elems, {
+          direction: "left"
+        });
+      });
+    </script>
+    <script src="upload_file.js"></script>
+    <script src="submit.js"></script>
+    <script src="select_answer.js"></script>
+    <script src="back_button.js"></script>
+  </body>
+</html>
